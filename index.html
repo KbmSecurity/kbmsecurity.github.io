@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="KBM Security - Especialistas em Red Team, Pentest e Análise de Vulnerabilidades. Testamos, Analisamos e Protegemos sua infraestrutura.">
+    <meta name="keywords"
+        content="segurança cibernética, red team, pentest, análise de vulnerabilidades, segurança de rede, segurança cloud">
+    <meta name="author" content="KBM Security">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="KBM Security - Red Team & Pentest Services">
+    <meta property="og:description" content="Segurança Inabalável: Testamos, Analisamos, Protegemos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kbmsecurity.com">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KBM Security - Red Team & Pentest Services">
+    <meta name="twitter:description" content="Segurança Inabalável: Testamos, Analisamos, Protegemos.">
+
+    <title>KBM Security - Red Team & Pentest Services</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'kbm-red': '#ef4444',
+                        'kbm-dark': '#050505',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                    }
+                },
+            },
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="min-h-screen bg-kbm-dark text-gray-100 font-sans overflow-x-hidden selection:bg-red-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6" role="navigation"
+        aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-12">
+                <!-- Logo -->
+                <a href="#home" class="flex-shrink-0 flex items-center gap-2 group cursor-pointer"
+                    aria-label="KBM Security Home">
+                    <img src="logo.png" alt="KBM Security" class="w-10 h-10 group-hover:scale-110 transition-transform">
+                    <span class="font-mono font-bold text-xl tracking-tighter text-white">
+                        KBM<span class="text-red-500"> SECURITY</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home"
+                            class="font-mono text-sm text-gray-300 hover:text-red-500 hover:underline decoration-red-500 decoration-2 underline-offset-4 transition-all duration-300">INÍCIO</a>
+                        <a href="#methodology"
+                            class="font-mono text-sm text-gray-300 hover:text-red-500 hover:underline decoration-red-500 decoration-2 underline-offset-4 transition-all duration-300">METODOLOGIAS</a>
+                        <a href="#about"
+                            class="font-mono text-sm text-gray-300 hover:text-red-500 hover:underline decoration-red-500 decoration-2 underline-offset-4 transition-all duration-300">SOBRE</a>
+                        <a href="#services"
+                            class="font-mono text-sm text-gray-300 hover:text-red-500 hover:underline decoration-red-500 decoration-2 underline-offset-4 transition-all duration-300">SERVIÇOS</a>
+                        <a href="#contact"
+                            class="font-mono text-sm text-gray-300 hover:text-red-500 hover:underline decoration-red-500 decoration-2 underline-offset-4 transition-all duration-300">CONTATO</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Button -->
+                <button id="mobile-menu-btn" class="-mr-2 flex md:hidden text-gray-300 hover:text-red-500 p-2"
+                    aria-label="Open menu" aria-expanded="false">
+                    <svg id="menu-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-black border-b border-red-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="mobile-link block px-3 py-2 font-mono text-base font-medium text-gray-300 hover:text-red-500 hover:bg-red-900/10 border-l-2 border-transparent hover:border-red-500 transition-colors">INÍCIO</a>
+                <a href="#methodology"
+                    class="mobile-link block px-3 py-2 font-mono text-base font-medium text-gray-300 hover:text-red-500 hover:bg-red-900/10 border-l-2 border-transparent hover:border-red-500 transition-colors">METODOLOGIAS</a>
+                <a href="#about"
+                    class="mobile-link block px-3 py-2 font-mono text-base font-medium text-gray-300 hover:text-red-500 hover:bg-red-900/10 border-l-2 border-transparent hover:border-red-500 transition-colors">SOBRE</a>
+                <a href="#services"
+                    class="mobile-link block px-3 py-2 font-mono text-base font-medium text-gray-300 hover:text-red-500 hover:bg-red-900/10 border-l-2 border-transparent hover:border-red-500 transition-colors">SERVIÇOS</a>
+                <a href="#contact"
+                    class="mobile-link block px-3 py-2 font-mono text-base font-medium text-gray-300 hover:text-red-500 hover:bg-red-900/10 border-l-2 border-transparent hover:border-red-500 transition-colors">CONTATO</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden"
+        aria-label="Hero section">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 cyber-grid z-0" aria-hidden="true"></div>
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-10" aria-hidden="true">
+        </div>
+
+        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto">
+            <div
+                class="mb-6 inline-flex items-center gap-2 px-3 py-1 border border-red-500/30 rounded-full bg-red-500/5 backdrop-blur-sm">
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse" aria-hidden="true"></span>
+                <span class="font-mono text-xs text-red-200 uppercase tracking-widest">
+                    Vulnerability & Risk Management
+                </span>
+            </div>
+
+            <h1 class="text-5xl md:text-8xl font-bold tracking-tighter mb-4 text-3d-shadow">
+                KBM SECURITY
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-400 mb-8 font-mono max-w-3xl mx-auto leading-relaxed">
+                Segurança Inabalável: <span class="text-red-500 font-mono font-semibold">Testamos, Analisamos,
+                    Protegemos.</span>
+            </p>
+
+            <div class="h-8 mb-12 font-mono text-sm md:text-base text-red-200" aria-live="polite">
+                <span id="typing-text"></span><span class="animate-pulse">_</span>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#contact"
+                    class="group relative rounded-lg px-8 py-4 bg-red-600 text-black font-bold font-mono overflow-hidden transition-transform hover:scale-105">
+                    <div
+                        class="absolute inset-0 w-full h-full bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-[-15deg]">
+                    </div>
+                    <span class="relative">INICIAR ANÁLISE</span>
+                </a>
+                <a href="#services"
+                    class="rounded-lg px-8 py-4 border border-gray-700 text-gray-300 font-mono hover:border-red-500 hover:text-red-500 transition-colors">
+                    EXPLORAR SERVIÇOS
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-600"
+            aria-hidden="true">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Standards Section -->
+    <section id="methodology" class="py-12 border-y border-neutral-900 bg-black"
+        aria-label="Security standards and methodologies">
+        <div
+            class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            <div class="text-xl md:text-2xl font-mono font-bold text-gray-500 hover:text-white flex items-center gap-2 cursor-help transition-colors"
+                title="Compliance with OWASP">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                OWASP
+            </div>
+            <div class="text-xl md:text-2xl font-mono font-bold text-gray-500 hover:text-white flex items-center gap-2 cursor-help transition-colors"
+                title="Compliance with NIST">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                NIST
+            </div>
+            <div class="text-xl md:text-2xl font-mono font-bold text-gray-500 hover:text-white flex items-center gap-2 cursor-help transition-colors"
+                title="Compliance with MITRE ATT&CK">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                MITRE ATT&CK
+            </div>
+            <div class="text-xl md:text-2xl font-mono font-bold text-gray-500 hover:text-white flex items-center gap-2 cursor-help transition-colors"
+                title="Compliance with PTES">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                PTES
+            </div>
+            <div class="text-xl md:text-2xl font-mono font-bold text-gray-500 hover:text-white flex items-center gap-2 cursor-help transition-colors"
+                title="Compliance with ISO 27001">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                ISO 27001
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black relative border-t border-neutral-900" aria-labelledby="about-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div>
+                    <h2 id="about-heading" class="text-3xl md:text-4xl font-bold mb-6">
+                        <span class="text-red-600">/</span> QUEM SOMOS
+                    </h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Fundada em 2022, a <strong class="text-white">KBM Security</strong> é especializada em operações
+                        de <span class="text-red-500">Red Team</span>. Não apenas encontramos falhas; nós simulamos
+                        adversários reais para testar os limites da sua infraestrutura.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Essa <strong class="text-white">precisão e prontidão para a ação</strong> estão refletidas na
+                        nossa
+                        identidade: nossa metodologia espelha o <span class="text-red-500">olhar de um gato</span> —
+                        preciso, ágil e sempre focado, pronto
+                        para a intervenção no momento exato.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Estamos constantemente vigilantes
+                        para identificar vulnerabilidades e resolver problemas antes que eles causem impactos,
+                        transformando a detecção em ação imediata.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-lg border border-neutral-800 p-4 hover:border-red-900 transition-colors">
+                            <div class="text-xs font-mono text-gray-500 mb-1">Pentest</div>
+                            <div class="text-xl font-bold text-white">EXPERT</div>
+                        </div>
+                        <div class="rounded-lg border border-neutral-800 p-4 hover:border-red-900 transition-colors">
+                            <div class="text-xs font-mono text-gray-500 mb-1">Operações</div>
+                            <div class="text-xl font-bold text-white">24/7</div>
+                        </div>
+                        <div class="rounded-lg border border-neutral-800 p-4 hover:border-red-900 transition-colors">
+                            <div class="text-xs font-mono text-gray-500 mb-1">Risco</div>
+                            <div class="text-xl font-bold text-white">MITIGADO</div>
+                        </div>
+                        <div class="rounded-lg border border-neutral-800 p-4 hover:border-red-900 transition-colors">
+                            <div class="text-xs font-mono text-gray-500 mb-1">Compliance</div>
+                            <div class="text-xl font-bold text-white">TOTAL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fake Terminal -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-red-900 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"
+                        aria-hidden="true"></div>
+                    <div
+                        class="relative rounded-lg bg-neutral-950 border border-neutral-800 overflow-hidden font-mono text-sm shadow-2xl">
+                        <div class="bg-neutral-900 px-4 py-2 flex items-center gap-2 border-b border-neutral-800">
+                            <div class="w-3 h-3 rounded-full bg-red-500" aria-hidden="true"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500" aria-hidden="true"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500" aria-hidden="true"></div>
+                            <div class="ml-2 text-xs text-gray-500">root@kbm-security:~</div>
+                        </div>
+                        <div class="p-6 text-gray-300 space-y-2">
+                            <div class="flex gap-2">
+                                <span class="text-red-500" aria-hidden="true">➜</span>
+                                <span class="text-blue-400" aria-hidden="true">~</span>
+                                <span>kbm --info</span>
+                            </div>
+                            <div class="pl-4 text-gray-500 opacity-80">
+                                Loading modules...<br>
+                                [OK] Pentest Web/API<br>
+                                [OK] Network Analysis<br>
+                                [OK] Cloud Security<br>
+                                <span class="text-green-500">Target Acquired: Vulnerabilities identified.</span>
+                            </div>
+                            <div class="flex gap-2 pt-4">
+                                <span class="text-red-500" aria-hidden="true">➜</span>
+                                <span class="text-blue-400" aria-hidden="true">~</span>
+                                <span class="animate-pulse">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-neutral-900 relative overflow-hidden" aria-labelledby="problem-heading">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(#ef4444 1px, transparent 1px); background-size: 30px 30px;"
+            aria-hidden="true"></div>
+
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <div class="inline-block p-4 rounded-full bg-red-500/10 mb-6 animate-pulse">
+                <svg class="w-12 h-12 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+            </div>
+            <h2 id="problem-heading" class="text-3xl md:text-5xl font-bold text-white mb-6">
+                Sua empresa está <span
+                    class="text-red-500 underline decoration-dashed underline-offset-8">realmente</span> segura?
+            </h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Muitas empresas acreditam que estão protegidas até sofrerem o primeiro ataque. Vulnerabilidades não
+                identificadas são portas abertas para o comprometimento de dados.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-12">
+                <!-- Card 01 -->
+                <div
+                    class="group relative bg-gradient-to-br from-neutral-900 to-black p-8 rounded-2xl border border-neutral-800 hover:border-red-500/50 transition-all duration-500 overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-all duration-500">
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="inline-block text-4xl font-black text-red-500/20 group-hover:text-red-500/40 transition-colors font-mono mb-2">01</span>
+                        <h3 class="text-xl font-bold text-white mb-4">Auditoria e Escopo</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Definição da área de análise. Auditoria detalhada de ativos, arquitetura de rede e sistemas
+                            para estabelecer a fundação da avaliação de segurança.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 02 -->
+                <div
+                    class="group relative bg-gradient-to-br from-neutral-900 to-black p-8 rounded-2xl border border-neutral-800 hover:border-red-500/50 transition-all duration-500 overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-all duration-500">
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="inline-block text-4xl font-black text-red-500/20 group-hover:text-red-500/40 transition-colors font-mono mb-2">02</span>
+                        <h3 class="text-xl font-bold text-white mb-4">Diagnóstico de Vulnerabilidade</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Execução de <em class="text-red-400 not-italic">Pen Test</em> (Testes de Penetração) para
+                            encontrar e classificar vulnerabilidades e <em class="text-red-400 not-italic">gaps</em> de
+                            segurança em redes, aplicações e configurações.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 03 -->
+                <div
+                    class="group relative bg-gradient-to-br from-neutral-900 to-black p-8 rounded-2xl border border-neutral-800 hover:border-red-500/50 transition-all duration-500 overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-all duration-500">
+                    </div>
+                    <div class="relative">
+                        <span
+                            class="inline-block text-4xl font-black text-red-500/20 group-hover:text-red-500/40 transition-colors font-mono mb-2">03</span>
+                        <h3 class="text-xl font-bold text-white mb-4">Implementação e Validação</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Entrega de um plano de remediação detalhado. Aconselhamento na implementação e re-testes
+                            para validar o fechamento de todas as brechas identificadas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-neutral-950 relative" aria-labelledby="services-heading">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-900 to-transparent"
+            aria-hidden="true"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="font-mono text-red-500 text-sm tracking-widest uppercase">Entregas</span>
+                <h2 id="services-heading" class="text-4xl font-bold mt-2 text-white"><span class="text-red-600">/</span>
+                    O QUE FAZEMOS</h2>
+            </div>
+
+            <!-- Horizontal Scroll Container -->
+            <div id="services-scroll-container" class="relative w-full overflow-hidden no-scrollbar py-10"
+                style="overflow-x: scroll;">
+                <div id="services-track" class="flex gap-6">
+                    <!-- Original Cards -->
+                    <!-- Service Card 1 -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
+                            Web/API</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Simulação de ataques em aplicações web e APIs para identificar falhas como SQL Injection,
+                            XSS e
+                            quebra de autenticação.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">OWASP
+                                TOP 10</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">REST</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">SOAP</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
+                            Network</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Análise profunda da infraestrutura de rede interna e externa, explorando configurações
+                            incorretas e serviços vulneráveis.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">INFRA</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">WIFI</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">FIREWALL</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
+                            Cloud</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Avaliação de segurança em ambientes AWS, Azure e GCP, focando em permissões excessivas e
+                            configurações inseguras.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">AWS</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">AZURE</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">IAM</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M12 8v4"></path>
+                                <path d="M12 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Análise
+                            de
+                            Vulnerabilidades</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Mapeamento contínuo de ativos e classificação de riscos para correção proativa antes da
+                            exploração real.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">SCANNING</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">MITIGAÇÃO</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 5 (New) -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                                <path
+                                    d="M492.426,14.706c-19.608-19.609-51.513-19.609-71.12,0C404.33,31.683,39.382,396.632,19.645,416.37c-19.609,19.608-19.609,51.513-0.001,71.12c19.653,19.656,51.466,19.658,71.121,0l47.447-47.447c2.454,17.371,10.342,34.115,23.674,47.447c32.678,32.68,85.854,32.682,118.535,0c29.813-29.812,31.982-75.498,9.192-107.62c19.644-21.168,38.27-50.8,49.432-78.951c6.547-16.512,10.194-31.36,10.948-44.299c37.433,5.795,77.713-14.641,105.131-42.06c3.178-3.178,6.187-6.47,9.054-9.837v235.515c0,9.244-7.52,16.766-16.763,16.766c-9.243,0-16.763-7.52-16.763-16.763v-33.527c0-9.258-7.506-16.763-16.763-16.763c-9.258,0-16.763,7.505-16.763,16.763v33.527c0,27.73,22.56,50.29,50.29,50.29c27.73,0,50.178-22.561,50.178-50.292c0-12.612,0-346.235,0-360.63C511.719,59.969,510.078,32.357,492.426,14.706z M279.021,204.406l23.707,23.707l-99.06,99.06l-23.707-23.707L279.021,204.406z M67.057,463.784c-6.55,6.55-17.155,6.553-23.706,0c-0.001,0-0.001,0-0.001,0c-6.552-6.553-6.552-17.155,0-23.707l112.903-112.904l23.707,23.707L67.057,463.784z M256.713,463.782c-19.61,19.609-51.513,19.608-71.123,0c-15.551-15.551-18.755-38.832-9.639-57.583l36.327,34.946c6.667,6.415,17.28,6.217,23.703-0.459c6.418-6.672,6.213-17.284-0.459-23.702l-35.674-34.317c18.699-8.72,41.564-5.304,56.864,9.995C276.37,412.319,276.369,444.128,256.713,463.782z M307.877,288.562c-9.556,24.105-25.991,50.297-42.701,68.354c-9.97-6.156-20.95-10.046-32.204-11.636l82.532-82.532C314.248,269.99,311.816,278.63,307.877,288.562z M431.417,190.854c-24.18,24.18-54.756,36.303-76.623,32.608l108.768-108.769C466.842,132.942,458.931,163.339,431.417,190.854z M468.721,62.12L326.434,204.406L302.728,180.7L445.014,38.413c6.552-6.552,17.154-6.552,23.707,0C475.273,44.967,475.273,55.568,468.721,62.12z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Simulação de Phishing</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Testes controlados (inofensivos) para medir quantos funcionários clicam ou fornecem dados em
+                            e-mails fraudulentos. É o principal serviço que usa a técnica de Red Team para
+                            conscientização.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">EMAIL</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">SOCIAL
+                                ENGINEERING</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">AWARENESS</span>
+                        </div>
+                    </div>
+
+                    <!-- Duplicated Cards for Seamless Loop -->
+                    <!-- Repeat Service Card 1 -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
+                            Web/API</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Simulação de ataques em aplicações web e APIs para identificar falhas como SQL Injection,
+                            XSS e
+                            quebra de autenticação.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">OWASP
+                                TOP 10</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">REST</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">SOAP</span>
+                        </div>
+                    </div>
+
+                    <!-- Repeat Service Card 2 -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
+                            Network</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Análise profunda da infraestrutura de rede interna e externa, explorando configurações
+                            incorretas e serviços vulneráveis.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">INFRA</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">WIFI</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">FIREWALL</span>
+                        </div>
+                    </div>
+
+                    <!-- Repeat Service Card 3 -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
+                            Cloud</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Avaliação de segurança em ambientes AWS, Azure e GCP, focando em permissões excessivas e
+                            configurações inseguras.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">AWS</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">AZURE</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">IAM</span>
+                        </div>
+                    </div>
+
+                    <!-- Repeat Service Card 4 -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M12 8v4"></path>
+                                <path d="M12 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Análise
+                            de
+                            Vulnerabilidades</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Mapeamento contínuo de ativos e classificação de riscos para correção proativa antes da
+                            exploração real.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">SCANNING</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">MITIGAÇÃO</span>
+                        </div>
+                    </div>
+
+                    <!-- Repeat Service Card 5 -->
+                    <div
+                        class="group relative w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 hover:border-red-600 transition-all duration-300 hover:scale-[1.02] overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="text-red-500 w-4 h-4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12"></polyline>
+                                <polyline points="6 12 2 12"></polyline>
+                                <polyline points="12 6 12 2"></polyline>
+                                <polyline points="12 22 12 18"></polyline>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-neutral-950 rounded flex items-center justify-center mb-6 border border-neutral-800 group-hover:border-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+                            <svg class="text-gray-300 group-hover:text-red-500 w-6 h-6"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                                <path
+                                    d="M492.426,14.706c-19.608-19.609-51.513-19.609-71.12,0C404.33,31.683,39.382,396.632,19.645,416.37c-19.609,19.608-19.609,51.513-0.001,71.12c19.653,19.656,51.466,19.658,71.121,0l47.447-47.447c2.454,17.371,10.342,34.115,23.674,47.447c32.678,32.68,85.854,32.682,118.535,0c29.813-29.812,31.982-75.498,9.192-107.62c19.644-21.168,38.27-50.8,49.432-78.951c6.547-16.512,10.194-31.36,10.948-44.299c37.433,5.795,77.713-14.641,105.131-42.06c3.178-3.178,6.187-6.47,9.054-9.837v235.515c0,9.244-7.52,16.766-16.763,16.766c-9.243,0-16.763-7.52-16.763-16.763v-33.527c0-9.258-7.506-16.763-16.763-16.763c-9.258,0-16.763,7.505-16.763,16.763v33.527c0,27.73,22.56,50.29,50.29,50.29c27.73,0,50.178-22.561,50.178-50.292c0-12.612,0-346.235,0-360.63C511.719,59.969,510.078,32.357,492.426,14.706z M279.021,204.406l23.707,23.707l-99.06,99.06l-23.707-23.707L279.021,204.406z M67.057,463.784c-6.55,6.55-17.155,6.553-23.706,0c-0.001,0-0.001,0-0.001,0c-6.552-6.553-6.552-17.155,0-23.707l112.903-112.904l23.707,23.707L67.057,463.784z M256.713,463.782c-19.61,19.609-51.513,19.608-71.123,0c-15.551-15.551-18.755-38.832-9.639-57.583l36.327,34.946c6.667,6.415,17.28,6.217,23.703-0.459c6.418-6.672,6.213-17.284-0.459-23.702l-35.674-34.317c18.699-8.72,41.564-5.304,56.864,9.995C276.37,412.319,276.369,444.128,256.713,463.782z M307.877,288.562c-9.556,24.105-25.991,50.297-42.701,68.354c-9.97-6.156-20.95-10.046-32.204-11.636l82.532-82.532C314.248,269.99,311.816,278.63,307.877,288.562z M431.417,190.854c-24.18,24.18-54.756,36.303-76.623,32.608l108.768-108.769C466.842,132.942,458.931,163.339,431.417,190.854z M468.721,62.12L326.434,204.406L302.728,180.7L445.014,38.413c6.552-6.552,17.154-6.552,23.707,0C475.273,44.967,475.273,55.568,468.721,62.12z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Simulação de Phishing</h3>
+                        <p
+                            class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
+                            Orquestração de ameaças com priorização por risco de negócio e redução contínua da
+                            superfície de ataque.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">LIFECYCLE</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">SLA</span>
+                            <span
+                                class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">OPENVAS</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div id="pagination-dots" class="flex justify-center gap-3 mt-4">
+                <!-- Dots generated by JS -->
+            </div>
+        </div>
+    </section>
+    <!-- Parceiros Section -->
+    <section id="parceiros" class="py-16 bg-black relative overflow-hidden" aria-labelledby="parceiros-heading">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <!-- Title -->
+            <h2 id="parceiros-heading" class="text-3xl md:text-4xl font-bold mb-2">
+                <span class="text-red-600">/</span> PARCEIRO
+            </h2>
+
+            <!-- Logo Carousel -->
+            <div class="relative w-full overflow-hidden no-scrollbar py-4">
+                <div id="clients-track" class="flex items-center justify-center gap-16 animate-scroll-clients">
+                    <!-- Original logos -->
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <!-- Duplicated for seamless scroll -->
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-8 bg-black relative" aria-labelledby="contact-heading">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-neutral-950 rounded-2xl border border-neutral-800 p-8 md:p-12 relative overflow-hidden">
+
+                <div class="text-center mb-8">
+                    <div class="inline-block p-3 rounded-full bg-red-500/5 border border-red-500/20 mb-6">
+                        <svg class="w-8 h-8 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                    </div>
+                    <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold text-red mb-6 tracking-tight">
+                        Contate a KBM
+                    </h2>
+                    <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-2">
+                        Vulnerabilidades não emitem avisos prévios. Enquanto sua infraestrutura espera, ameaças evoluem.
+                    </p>
+                    <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
+                        Não aguarde o incidente para validar sua defesa.
+                    </p>
+                </div>
+
+                <!-- Creative Contact Section -->
+                <div class="max-w-3xl mx-auto">
+                    <!-- Contact Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <!-- Email Card -->
+                        <a href="mailto:kbmsecurity@gmail.com"
+                            class="group relative bg-gradient-to-br from-neutral-900/80 to-neutral-950 rounded-2xl border border-neutral-700/50 p-6 hover:border-red-500/60 hover:shadow-[0_0_40px_rgba(239,68,68,0.15)] transition-all duration-500 overflow-hidden text-center backdrop-blur-sm">
+                            <!-- Animated background glow -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-red-500/0 via-red-500/5 to-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl">
+                            </div>
+
+                            <!-- Icon -->
+                            <div
+                                class="relative mx-auto mb-4 w-14 h-14 bg-gradient-to-br from-red-500/20 to-red-600/10 rounded-2xl flex items-center justify-center border border-red-500/30 group-hover:scale-110 group-hover:border-red-500/70 group-hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] transition-all duration-500">
+                                <svg class="w-6 h-6 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="relative">
+                                <span
+                                    class="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] block mb-2">Contato
+                                    Direto</span>
+                                <h3
+                                    class="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors duration-300">
+                                    Email</h3>
+                                <p class="text-gray-400 font-mono text-sm group-hover:text-gray-300 transition-colors">
+                                    kbmsecurity@gmail.com</p>
+                            </div>
+
+                            <!-- Bottom accent line -->
+                            <div
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-red-500 to-transparent group-hover:w-3/4 transition-all duration-500">
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn Card -->
+                        <a href="https://www.linkedin.com/company/kbmsecurity/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="group relative bg-gradient-to-br from-neutral-900/80 to-neutral-950 rounded-2xl border border-neutral-700/50 p-6 hover:border-blue-500/60 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] transition-all duration-500 overflow-hidden text-center backdrop-blur-sm">
+                            <!-- Animated background glow -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/5 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl">
+                            </div>
+
+                            <!-- Icon -->
+                            <div
+                                class="relative mx-auto mb-4 w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-2xl flex items-center justify-center border border-blue-500/30 group-hover:scale-110 group-hover:border-blue-500/70 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-500">
+                                <svg class="w-6 h-6 text-blue-500" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="relative">
+                                <span
+                                    class="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] block mb-2">Conecte-se</span>
+                                <h3
+                                    class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                                    LinkedIn</h3>
+                                <p class="text-gray-400 font-mono text-sm group-hover:text-gray-300 transition-colors">
+                                    @kbmsecurity</p>
+                            </div>
+
+                            <!-- Bottom accent line -->
+                            <div
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent group-hover:w-3/4 transition-all duration-500">
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <!-- CTA Button -->
+                    <div class="text-center">
+                        <a href="mailto:kbmsecurity@gmail.com?subject=Solicitação de Análise de Segurança"
+                            class="group inline-flex items-center gap-4 rounded-lg bg-white text-black font-bold py-5 px-10 hover:bg-red-600 hover:text-white transition-all duration-300 uppercase tracking-widest font-mono text-sm">
+                            <span
+                                class="w-3 h-3 bg-red-600 rounded-full group-hover:bg-white group-hover:animate-pulse transition-colors"></span>
+                            <span>Solicitar Análise de Segurança</span>
+                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <p class="text-gray-600 text-sm font-mono mt-6">
+                            Resposta em até <span class="text-red-500">24 horas</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-neutral-900 py-12 text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="logo.png" alt="KBM Security" class="w-8 h-8">
+                    <span class="font-mono font-bold text-xl text-white">KBM SECURITY</span>
+                </div>
+                <div class="text-gray-500 text-sm">
+                    &copy; <span id="year"></span> KBM Security. Todos os direitos reservados.
+                </div>
+                <div class="flex gap-4">
+                    <a href="mailto:kbmsecurity@gmail.com"
+                        class="w-8 h-8 rounded-lg bg-neutral-900 flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-colors"
+                        aria-label="Email">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/kbmsecurity/" target="_blank" rel="noopener noreferrer"
+                        class="w-8 h-8 rounded-lg bg-neutral-900 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-colors"
+                        aria-label="LinkedIn">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <!-- Scroller Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('services-scroll-container');
+            const track = document.getElementById('services-track');
+            const dotsContainer = document.getElementById('pagination-dots');
+
+            // Configuration
+            const originalCardCount = 5;
+            let scrollSpeed = 1; // px per tick
+            let isPaused = false;
+            let autoScrollId;
+
+            // Generate Dots
+            for (let i = 0; i < originalCardCount; i++) {
+                const dot = document.createElement('button');
+                dot.className = `w-2 h-2 rounded-full transition-all duration-300 bg-neutral-800 hover:bg-red-500`;
+                dot.ariaLabel = `Go to slide ${i + 1}`;
+
+                dot.addEventListener('click', () => {
+                    // Calculate position: Card Width (including gap) * index
+                    // We assume first card width + gap. 
+                    const card = track.children[0];
+                    const gap = 24; // tailwind gap-6 is 1.5rem = 24px
+                    const cardWidth = card.offsetWidth + gap;
+
+                    container.scrollTo({
+                        left: i * cardWidth,
+                        behavior: 'smooth'
+                    });
+
+                    updateActiveDot(i);
+                });
+
+                dotsContainer.appendChild(dot);
+            }
+
+            // Update Active Dot based on scroll position
+            function updateActiveDot(forceIndex = null) {
+                const dots = dotsContainer.children;
+                let activeIndex = forceIndex;
+
+                if (activeIndex === null) {
+                    const card = track.children[0];
+                    const gap = 24;
+                    const cardWidth = card.offsetWidth + gap;
+                    activeIndex = Math.round(container.scrollLeft / cardWidth) % originalCardCount;
+                }
+
+                for (let i = 0; i < dots.length; i++) {
+                    if (i === activeIndex) {
+                        dots[i].classList.remove('bg-neutral-800');
+                        dots[i].classList.add('bg-red-500', 'scale-125');
+                    } else {
+                        dots[i].classList.add('bg-neutral-800');
+                        dots[i].classList.remove('bg-red-500', 'scale-125');
+                    }
+                }
+            }
+
+            // Auto Scroll Logic
+            function startAutoScroll() {
+                if (autoScrollId) return;
+
+                autoScrollId = setInterval(() => {
+                    if (!isPaused) {
+                        const maxScroll = track.scrollWidth / 2; // Split point since duplicated
+
+                        if (container.scrollLeft >= maxScroll) {
+                            // Seamless loop: reset to 0
+                            container.scrollLeft = 0;
+                        } else {
+                            container.scrollLeft += scrollSpeed;
+                        }
+
+                        // Optional: Update dots while scrolling (might be distinct visual noise, but keeps sync)
+                        // updateActiveDot(); 
+                    }
+                }, 20); // 50fps
+            }
+
+            // Interaction Handlers
+            container.addEventListener('mouseenter', () => isPaused = true);
+            container.addEventListener('mouseleave', () => isPaused = false);
+            dotsContainer.addEventListener('mouseenter', () => isPaused = true);
+            dotsContainer.addEventListener('mouseleave', () => isPaused = false);
+
+            // Handle manual scroll (touch/wheel) to pause temporarily
+            container.addEventListener('touchstart', () => isPaused = true);
+            container.addEventListener('touchend', () => {
+                setTimeout(() => isPaused = false, 2000); // Resume after 2s
+            });
+
+            // Initialize
+            startAutoScroll();
+            updateActiveDot(0);
+
+            // Update dots on scroll event (throttled/debounced ideally, but direct for responsiveness)
+            container.addEventListener('scroll', () => {
+                // Determine functionality - if auto scrolling, maybe don't update constantly? 
+                // Let's update constantly for "intuitiveness"
+                updateActiveDot();
+            });
+        });
+    </script>
+</body>
+
+</html>

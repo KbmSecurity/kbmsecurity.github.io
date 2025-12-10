@@ -1,0 +1,209 @@
+/* KBM Security - Custom Styles */
+
+:root {
+    --kbm-red: #ef4444;
+    --kbm-dark: #050505;
+    --color-primary: #f3f4f6;
+    --color-secondary: #ff5252;
+    --color-tertiary: #ff3838;
+    --color-quaternary: #ff1f1f;
+    --color-quinary: #ef4444;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #262626;
+    border: 1px solid #dc2626;
+}
+
+/* 3D Text Shadow Animation */
+.text-3d-shadow {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    animation: shadows-3d 1.2s ease-in-out infinite;
+    letter-spacing: 0.4rem;
+}
+
+/* Grid Background */
+.cyber-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 0, 0, 0.05) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+/* Scanline Effect */
+.scanline {
+    width: 100%;
+    height: 96px;
+    z-index: 10;
+    position: absolute;
+    bottom: 100%;
+    pointer-events: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.1;
+    animation: scanline 10s linear infinite;
+}
+
+/* Keyframes */
+@keyframes shadows-3d {
+    0% {
+        text-shadow: none;
+    }
+
+    10% {
+        transform: translate(-3px, -3px);
+        text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+
+    20% {
+        transform: translate(-6px, -6px);
+        text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary);
+    }
+
+    30% {
+        transform: translate(-9px, -9px);
+        text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+
+    40% {
+        transform: translate(-12px, -12px);
+        text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+            12px 12px 0 var(--color-quinary);
+    }
+
+    50% {
+        transform: translate(-12px, -12px);
+        text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+            12px 12px 0 var(--color-quinary);
+    }
+
+    60% {
+        text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+            12px 12px 0 var(--color-quinary);
+    }
+
+    70% {
+        text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+
+    80% {
+        text-shadow: 3px 3px 0 var(--color-secondary),
+            6px 6px 0 var(--color-tertiary);
+    }
+
+    90% {
+        text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+
+    100% {
+        text-shadow: none;
+    }
+}
+
+@keyframes scanline {
+    0% {
+        bottom: 100%;
+    }
+
+    100% {
+        bottom: -100%;
+    }
+}
+
+/* Navbar scrolled state */
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(127, 29, 29, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Horizontal Scroll Animation */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        /* Move by half the width (because we duplicated the items) */
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    display: flex;
+    width: max-content;
+    /* Ensure container is as wide as its children */
+}
+
+/* Pause animation on hover */
+.animate-scroll:hover {
+    animation-play-state: paused;
+}
+
+/* Hide scrollbar for the container */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Scroll Offset for Fixed Navbar */
+section {
+    scroll-margin-top: 120px;
+}
+
+/* Center Methodology on screen when clicked */
+#methodology {
+    scroll-margin-top: 35vh;
+}
+
+/* Clients Logo Scroll Animation */
+@keyframes scroll-clients {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll-clients {
+    display: flex;
+    width: max-content;
+    animation: scroll-clients 20s linear infinite;
+}
+
+.animate-scroll-clients:hover {
+    animation-play-state: paused;
+}
