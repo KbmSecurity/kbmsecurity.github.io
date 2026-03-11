@@ -142,6 +142,27 @@ html {
     padding-bottom: 0.5rem;
 }
 
+/* On mobile: start navbar hidden above viewport, reveal after hero */
+@media (max-width: 767px) {
+    #navbar {
+        transform: translateY(-110%);
+        opacity: 0;
+        pointer-events: none;
+        transition:
+            transform 0.5s cubic-bezier(0.22, 0.68, 0, 1.1),
+            opacity   0.4s ease !important;
+    }
+    #navbar.mobile-nav-visible {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+        background-color: rgba(0, 0, 0, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(127, 29, 29, 0.45);
+    }
+}
+
 /* Horizontal Scroll Animation */
 @keyframes scroll-left {
     from {
@@ -206,4 +227,84 @@ section {
 
 .animate-scroll-clients:hover {
     animation-play-state: paused;
+}
+
+/* ─── Cat Eyes Hero Logo ─────────────────────────────────── */
+
+/* Rise-in entrance */
+@keyframes eye-rise {
+    0%   { opacity: 0; transform: translateY(60px) scale(0.85); }
+    70%  { opacity: 1; transform: translateY(-6px) scale(1.03); }
+    85%  { transform: translateY(3px) scale(0.99); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Blink: upper eyelid sweeps down then back up */
+@keyframes blink {
+    0%,  45%, 100% { transform: scaleY(0); }
+    50%, 60%       { transform: scaleY(1); }
+}
+
+/* Ambient iris glow pulse */
+@keyframes iris-glow {
+    0%,  100% { filter: drop-shadow(0 0 6px rgba(239,68,68,0.5)); }
+    50%        { filter: drop-shadow(0 0 18px rgba(239,68,68,0.9)); }
+}
+
+/* Glitch flicker on the whole eye group (rare) */
+@keyframes glitch-flicker {
+    0%, 95%, 100% { opacity: 1; transform: none; }
+    96%           { opacity: 0.6; transform: translateX(3px) skewX(4deg); }
+    97%           { opacity: 0.9; transform: translateX(-2px) skewX(-2deg); }
+    98%           { opacity: 0.7; transform: translateX(1px); }
+}
+
+/* Left eye entrance (slight delay) */
+.cat-eye-left {
+    animation:
+        eye-rise 1s cubic-bezier(.22,.68,0,1.2) 0.1s both,
+        glitch-flicker 8s ease-in-out 3s infinite;
+}
+
+/* Right eye entrance (slightly faster to land) */
+.cat-eye-right {
+    animation:
+        eye-rise 1s cubic-bezier(.22,.68,0,1.2) 0.25s both,
+        glitch-flicker 8s ease-in-out 5s infinite;
+}
+
+/* Eyelid blink — left eye */
+.eyelid-left {
+    transform-origin: 50% 0%;
+    transform-box: fill-box;
+    animation: blink 5s ease-in-out 2s infinite;
+}
+
+/* Eyelid blink — right eye (slightly after left) */
+.eyelid-right {
+    transform-origin: 50% 0%;
+    transform-box: fill-box;
+    animation: blink 5s ease-in-out 2.08s infinite;
+}
+
+/* Iris ambient glow */
+.iris-glow {
+    animation: iris-glow 3s ease-in-out infinite;
+}
+
+/* Pupil groups — cursor-tracked via JS custom properties */
+.pupil-group-l,
+.pupil-group-r {
+    transform: translate(var(--pupil-x, 0px), var(--pupil-y, 0px));
+    will-change: transform;
+}
+
+/* KBM wordmark fade-up after eyes land */
+@keyframes wordmark-rise {
+    0%   { opacity: 0; transform: translateY(20px); letter-spacing: 0.8rem; }
+    100% { opacity: 1; transform: translateY(0);    letter-spacing: 0.4rem; }
+}
+
+.hero-wordmark {
+    animation: wordmark-rise 0.8s cubic-bezier(.22,.68,0,1.2) 0.9s both;
 }

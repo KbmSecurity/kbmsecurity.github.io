@@ -174,30 +174,126 @@
                 </span>
             </div>
 
-            <h1 class="text-5xl md:text-8xl font-bold tracking-tighter mb-4 text-3d-shadow">
+            <!-- Cat Eyes SVG Logo — exact paths from assets/logo.svg -->
+            <div class="mb-2 flex justify-center w-full" aria-hidden="true">
+                <svg id="cat-eyes-logo" viewBox="0 0 559 186" width="100%" xmlns="http://www.w3.org/2000/svg"
+                    style="max-width:560px;height:auto;overflow:visible;">
+                    <defs>
+                        <!-- Iris radial gradients anchored to each eye center -->
+                        <radialGradient id="iris-grad-l" gradientUnits="userSpaceOnUse" cx="154" cy="85" r="90">
+                            <stop offset="0%" stop-color="#ff8080" />
+                            <stop offset="40%" stop-color="#ef4444" />
+                            <stop offset="100%" stop-color="#450a0a" />
+                        </radialGradient>
+                        <radialGradient id="iris-grad-r" gradientUnits="userSpaceOnUse" cx="417" cy="85" r="90">
+                            <stop offset="0%" stop-color="#ff8080" />
+                            <stop offset="40%" stop-color="#ef4444" />
+                            <stop offset="100%" stop-color="#450a0a" />
+                        </radialGradient>
+
+                        <!-- Clip paths — exact outer eye silhouettes from logo -->
+                        <clipPath id="clip-eye-l">
+                            <path
+                                d="M 44,30 C 71.71,30 85.20,29.85 113,35.40 123.32,37.46 135.63,40.20 145,45 145,45 139.32,65 139.32,65 139.32,65 137.34,83 137.34,83 137.34,92.15 140.26,108.36 143.31,117 143.31,117 149.97,132.99 149.97,132.99 150.76,134.42 152.11,136.96 154.02,136.96 156.01,136.96 157.20,134.52 157.87,132.99 157.87,132.99 162.86,120 162.86,120 168.32,106.90 170.07,95.07 170,81 169.96,72.01 167.64,64.69 166,56 174.02,57.31 180.45,62.66 187,67.17 204.88,79.50 221.53,96.72 233.31,115 236.42,119.83 242.26,128.93 244.31,134 245.29,136.69 246.45,139.89 244.31,142.39 241.66,145.70 227.65,150.05 223,151.66 203.14,158.53 180.06,164.76 159,165 159,165 146,165.91 146,165.91 132.58,165.15 119.33,162.84 107,157.33 97.81,153.23 85.30,145.36 78.34,138.14 53.26,112.09 39.29,65.73 44,30 Z" />
+                        </clipPath>
+                        <clipPath id="clip-eye-r">
+                            <path
+                                d="M 425,44 C 425,44 438,40.12 438,40.12 464.32,32.07 488.67,29.96 516,30 518.10,30 521.90,29.86 523.75,30.74 528.29,32.91 526.48,40.84 526.45,45 526.39,53.55 524.28,66.54 522.42,75 522.42,75 519.96,87 519.96,87 512.49,112.74 494.17,141.13 470,153.83 455.66,161.37 439.08,164.96 423,165.79 423,165.79 410,165 410,165 387.91,164.97 366.84,158.09 346,151.42 346,151.42 330,145.46 330,145.46 328.14,144.59 325.48,143.56 324.58,141.59 323.22,138.65 325.08,134.62 326.38,132 330.48,123.70 330.97,122.77 336.17,115 348.44,96.64 363.72,80.05 382,67.50 388.13,63.29 394.80,57.71 402,56 403.56,62.57 398.94,75.96 399.51,85 400.47,100.04 402.01,106.82 406.92,121 409.38,128.09 410.85,134.08 417,139 424.41,121.56 431.77,106.61 432,87 432.14,74.36 431.26,77.72 430.17,68 430.17,68 429.47,61 429.47,61 428.17,55.23 426.55,55.49 425,44 Z" />
+                        </clipPath>
+
+                        <!-- Red bloom glow filter -->
+                        <filter id="eye-glow" x="-35%" y="-35%" width="170%" height="170%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                            <feColorMatrix in="blur" type="matrix"
+                                values="1 0 0 0 0.3  0 0 0 0 0  0 0 0 0 0  0 0 0 1.2 0" result="redBlur" />
+                            <feMerge>
+                                <feMergeNode in="redBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- ══ LEFT EYE ══ -->
+                    <g class="cat-eye-left" filter="url(#eye-glow)">
+                        <!-- 1. Dark base fill -->
+                        <path
+                            d="M 44,30 C 71.71,30 85.20,29.85 113,35.40 123.32,37.46 135.63,40.20 145,45 145,45 139.32,65 139.32,65 139.32,65 137.34,83 137.34,83 137.34,92.15 140.26,108.36 143.31,117 143.31,117 149.97,132.99 149.97,132.99 150.76,134.42 152.11,136.96 154.02,136.96 156.01,136.96 157.20,134.52 157.87,132.99 157.87,132.99 162.86,120 162.86,120 168.32,106.90 170.07,95.07 170,81 169.96,72.01 167.64,64.69 166,56 174.02,57.31 180.45,62.66 187,67.17 204.88,79.50 221.53,96.72 233.31,115 236.42,119.83 242.26,128.93 244.31,134 245.29,136.69 246.45,139.89 244.31,142.39 241.66,145.70 227.65,150.05 223,151.66 203.14,158.53 180.06,164.76 159,165 159,165 146,165.91 146,165.91 132.58,165.15 119.33,162.84 107,157.33 97.81,153.23 85.30,145.36 78.34,138.14 53.26,112.09 39.29,65.73 44,30 Z"
+                            fill="#080000" stroke="#ef4444" stroke-width="1.5" />
+                        <!-- 2. Iris with pupil as transparent hole (evenodd) -->
+                        <path fill-rule="evenodd"
+                            d="M 44,30 C 71.71,30 85.20,29.85 113,35.40 123.32,37.46 135.63,40.20 145,45 145,45 139.32,65 139.32,65 139.32,65 137.34,83 137.34,83 137.34,92.15 140.26,108.36 143.31,117 143.31,117 149.97,132.99 149.97,132.99 150.76,134.42 152.11,136.96 154.02,136.96 156.01,136.96 157.20,134.52 157.87,132.99 157.87,132.99 162.86,120 162.86,120 168.32,106.90 170.07,95.07 170,81 169.96,72.01 167.64,64.69 166,56 174.02,57.31 180.45,62.66 187,67.17 204.88,79.50 221.53,96.72 233.31,115 236.42,119.83 242.26,128.93 244.31,134 245.29,136.69 246.45,139.89 244.31,142.39 241.66,145.70 227.65,150.05 223,151.66 203.14,158.53 180.06,164.76 159,165 159,165 146,165.91 146,165.91 132.58,165.15 119.33,162.84 107,157.33 97.81,153.23 85.30,145.36 78.34,138.14 53.26,112.09 39.29,65.73 44,30 Z M 152,62 C 153.73,62.60 154.49,62.55 155.57,64.31 157.81,67.98 157.35,84.38 156.71,89 156.15,93.07 155.97,94.62 152,96 148.73,78.60 149.75,78.97 152,62 Z"
+                            fill="url(#iris-grad-l)" class="iris-glow" />
+                        <!-- 3. Pupil catch-light (cursor-tracked) -->
+                        <g clip-path="url(#clip-eye-l)">
+                            <g class="pupil-group-l">
+                                <ellipse cx="152" cy="74" rx="1.2" ry="4" fill="rgba(255,230,180,0.55)" />
+                            </g>
+                        </g>
+                        <!-- 5. Eyelid blink -->
+                        <g clip-path="url(#clip-eye-l)">
+                            <rect class="eyelid-left" x="0" y="28" width="280" height="160" fill="#080000" />
+                        </g>
+                        <!-- 6. Outer rim accent -->
+                        <path
+                            d="M 44,30 C 71.71,30 85.20,29.85 113,35.40 123.32,37.46 135.63,40.20 145,45 145,45 139.32,65 139.32,65 139.32,65 137.34,83 137.34,83 137.34,92.15 140.26,108.36 143.31,117 143.31,117 149.97,132.99 149.97,132.99 150.76,134.42 152.11,136.96 154.02,136.96 156.01,136.96 157.20,134.52 157.87,132.99 157.87,132.99 162.86,120 162.86,120 168.32,106.90 170.07,95.07 170,81 169.96,72.01 167.64,64.69 166,56 174.02,57.31 180.45,62.66 187,67.17 204.88,79.50 221.53,96.72 233.31,115 236.42,119.83 242.26,128.93 244.31,134 245.29,136.69 246.45,139.89 244.31,142.39 241.66,145.70 227.65,150.05 223,151.66 203.14,158.53 180.06,164.76 159,165 159,165 146,165.91 146,165.91 132.58,165.15 119.33,162.84 107,157.33 97.81,153.23 85.30,145.36 78.34,138.14 53.26,112.09 39.29,65.73 44,30 Z"
+                            fill="none" stroke="rgba(239,68,68,0.3)" stroke-width="0.8" />
+                    </g>
+
+                    <!-- ══ RIGHT EYE ══ -->
+                    <g class="cat-eye-right" filter="url(#eye-glow)">
+                        <!-- 1. Dark base -->
+                        <path
+                            d="M 425,44 C 425,44 438,40.12 438,40.12 464.32,32.07 488.67,29.96 516,30 518.10,30 521.90,29.86 523.75,30.74 528.29,32.91 526.48,40.84 526.45,45 526.39,53.55 524.28,66.54 522.42,75 522.42,75 519.96,87 519.96,87 512.49,112.74 494.17,141.13 470,153.83 455.66,161.37 439.08,164.96 423,165.79 423,165.79 410,165 410,165 387.91,164.97 366.84,158.09 346,151.42 346,151.42 330,145.46 330,145.46 328.14,144.59 325.48,143.56 324.58,141.59 323.22,138.65 325.08,134.62 326.38,132 330.48,123.70 330.97,122.77 336.17,115 348.44,96.64 363.72,80.05 382,67.50 388.13,63.29 394.80,57.71 402,56 403.56,62.57 398.94,75.96 399.51,85 400.47,100.04 402.01,106.82 406.92,121 409.38,128.09 410.85,134.08 417,139 424.41,121.56 431.77,106.61 432,87 432.14,74.36 431.26,77.72 430.17,68 430.17,68 429.47,61 429.47,61 428.17,55.23 426.55,55.49 425,44 Z"
+                            fill="#080000" stroke="#ef4444" stroke-width="1.5" />
+                        <!-- 2. Iris with pupil as transparent hole (evenodd) -->
+                        <path fill-rule="evenodd"
+                            d="M 425,44 C 425,44 438,40.12 438,40.12 464.32,32.07 488.67,29.96 516,30 518.10,30 521.90,29.86 523.75,30.74 528.29,32.91 526.48,40.84 526.45,45 526.39,53.55 524.28,66.54 522.42,75 522.42,75 519.96,87 519.96,87 512.49,112.74 494.17,141.13 470,153.83 455.66,161.37 439.08,164.96 423,165.79 423,165.79 410,165 410,165 387.91,164.97 366.84,158.09 346,151.42 346,151.42 330,145.46 330,145.46 328.14,144.59 325.48,143.56 324.58,141.59 323.22,138.65 325.08,134.62 326.38,132 330.48,123.70 330.97,122.77 336.17,115 348.44,96.64 363.72,80.05 382,67.50 388.13,63.29 394.80,57.71 402,56 403.56,62.57 398.94,75.96 399.51,85 400.47,100.04 402.01,106.82 406.92,121 409.38,128.09 410.85,134.08 417,139 424.41,121.56 431.77,106.61 432,87 432.14,74.36 431.26,77.72 430.17,68 430.17,68 429.47,61 429.47,61 428.17,55.23 426.55,55.49 425,44 Z M 414,62 C 418.68,63.63 418.43,66.44 418.95,71 419.71,77.69 421.99,93.23 414,96 410.30,82.04 412.20,75.58 414,62 Z"
+                            fill="url(#iris-grad-r)" class="iris-glow" />
+                        <!-- 3. Pupil catch-light (cursor-tracked) -->
+                        <g clip-path="url(#clip-eye-r)">
+                            <g class="pupil-group-r">
+                                <ellipse cx="415" cy="74" rx="1.2" ry="4" fill="rgba(255,230,180,0.55)" />
+                            </g>
+                        </g>
+                        <!-- 5. Eyelid blink -->
+                        <g clip-path="url(#clip-eye-r)">
+                            <rect class="eyelid-right" x="310" y="28" width="250" height="160" fill="#080000" />
+                        </g>
+                        <!-- 6. Outer rim accent -->
+                        <path
+                            d="M 425,44 C 425,44 438,40.12 438,40.12 464.32,32.07 488.67,29.96 516,30 518.10,30 521.90,29.86 523.75,30.74 528.29,32.91 526.48,40.84 526.45,45 526.39,53.55 524.28,66.54 522.42,75 522.42,75 519.96,87 519.96,87 512.49,112.74 494.17,141.13 470,153.83 455.66,161.37 439.08,164.96 423,165.79 423,165.79 410,165 410,165 387.91,164.97 366.84,158.09 346,151.42 346,151.42 330,145.46 330,145.46 328.14,144.59 325.48,143.56 324.58,141.59 323.22,138.65 325.08,134.62 326.38,132 330.48,123.70 330.97,122.77 336.17,115 348.44,96.64 363.72,80.05 382,67.50 388.13,63.29 394.80,57.71 402,56 403.56,62.57 398.94,75.96 399.51,85 400.47,100.04 402.01,106.82 406.92,121 409.38,128.09 410.85,134.08 417,139 424.41,121.56 431.77,106.61 432,87 432.14,74.36 431.26,77.72 430.17,68 430.17,68 429.47,61 429.47,61 428.17,55.23 426.55,55.49 425,44 Z"
+                            fill="none" stroke="rgba(239,68,68,0.3)" stroke-width="0.8" />
+                    </g>
+                </svg>
+            </div>
+
+
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tighter mb-4 my-6">
                 KBM SECURITY
             </h1>
 
-            <p class="text-xl md:text-2xl text-gray-400 mb-8 font-mono max-w-3xl mx-auto leading-relaxed">
-                Segurança Inabalável:
-                <span class="text-red-500 font-mono font-semibold">Testamos, Analisamos, Protegemos.</span>
+
+            <p class="text-xl md:text-xl text-gray-400 mb-8 my-6 font-mono max-w-3xl mx-auto leading-relaxed">
+                Segurança Inabalável: <br>
+                <span class="text-red-500 font-mono font-bold">Testamos, Analisamos, Protegemos.</span>
             </p>
 
             <div class="h-8 mb-12 font-mono text-sm md:text-base text-red-200" aria-live="polite">
                 <span id="typing-text"></span><span class="animate-pulse">_</span>
             </div>
 
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <div class="flex flex-row gap-3 justify-center items-center">
                 <a href="https://www.kbmsecurity.com.br/blog" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 rounded-lg px-8 py-4 border border-white text-white font-mono hover:bg-transparent hover:border-red-500 hover:bg-red-500 hover:text-red-500 transition-colors">
-                    <img src="assets/favicon.svg" alt="" class="w-6" aria-hidden="true" />
+                    class="inline-flex items-center gap-2 rounded-lg px-4 py-3 md:px-8 md:py-4 border border-white text-white font-mono text-sm hover:bg-transparent hover:border-red-500 hover:bg-red-500 hover:text-red-500 transition-colors">
+                    <img src="assets/favicon.svg" alt="" class="w-5 md:w-6" aria-hidden="true" />
                     BLOG
                 </a>
                 <a href="#services"
-                    class="rounded-lg px-8 py-4 border border-gray-700 text-gray-300 font-mono hover:border-red-500 hover:text-red-500 transition-colors">
-                    EXPLORAR SERVIÇOS
+                    class="rounded-lg px-4 py-3 md:px-8 md:py-4 border border-gray-700 text-gray-300 font-mono text-sm hover:border-red-500 hover:text-red-500 transition-colors">
+                    SERVIÇOS
                 </a>
             </div>
+
         </div>
 
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-600"
@@ -1187,6 +1283,77 @@
                 updateActiveDot();
             });
         });
+    </script>
+
+    <!-- Cat Eyes Pupil Tracking -->
+    <script>
+        (function () {
+            // Match the SVG viewBox exactly
+            const SVG_W = 559, SVG_H = 186;
+
+            // Eye centers and max drift in SVG user units
+            const eyes = [
+                { selector: '.pupil-group-l', cx: 154, cy: 85, maxDrift: 14 },
+                { selector: '.pupil-group-r', cx: 417, cy: 85, maxDrift: 14 },
+            ];
+
+            function lerp(a, b, t) { return a + (b - a) * t; }
+
+            let currentX = [0, 0], currentY = [0, 0];
+            let targetX = [0, 0], targetY = [0, 0];
+
+            function tick() {
+                const svg = document.getElementById('cat-eyes-logo');
+                if (!svg) { requestAnimationFrame(tick); return; }
+
+                eyes.forEach((eye, i) => {
+                    currentX[i] = lerp(currentX[i], targetX[i], 0.09);
+                    currentY[i] = lerp(currentY[i], targetY[i], 0.09);
+
+                    const g = svg.querySelector(eye.selector);
+                    if (g) {
+                        // Drive CSS custom properties — does NOT conflict with keyframe animations
+                        g.style.setProperty('--pupil-x', `${currentX[i]}px`);
+                        g.style.setProperty('--pupil-y', `${currentY[i]}px`);
+                    }
+                });
+
+                requestAnimationFrame(tick);
+            }
+
+            document.addEventListener('mousemove', (e) => {
+                const svg = document.getElementById('cat-eyes-logo');
+                if (!svg) return;
+
+                const rect = svg.getBoundingClientRect();
+
+                // Map cursor to SVG user-space coordinates
+                const scaleX = SVG_W / rect.width;
+                const scaleY = SVG_H / rect.height;
+                const mx = (e.clientX - rect.left) * scaleX;
+                const my = (e.clientY - rect.top) * scaleY;
+
+                eyes.forEach((eye, i) => {
+                    const dx = mx - eye.cx;
+                    const dy = my - eye.cy;
+                    const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+                    const clamped = Math.min(dist, eye.maxDrift);
+
+                    // Convert SVG-unit offset → rendered px offset
+                    targetX[i] = (dx / dist) * clamped * (rect.width / SVG_W);
+                    targetY[i] = (dy / dist) * clamped * (rect.height / SVG_H);
+                });
+            });
+
+            // Return to center when cursor leaves the window
+            document.addEventListener('mouseleave', () => {
+                targetX = [0, 0];
+                targetY = [0, 0];
+            });
+
+            // Start RAF loop
+            requestAnimationFrame(tick);
+        })();
     </script>
 </body>
 

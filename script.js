@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.getElementById('navbar');
 
     window.addEventListener('scroll', function () {
+        // Desktop: frosted glass transition
         if (window.scrollY > 50) {
             navbar.classList.add('navbar-scrolled');
             navbar.classList.remove('bg-transparent', 'py-6');
@@ -66,38 +67,57 @@ document.addEventListener('DOMContentLoaded', function () {
             navbar.classList.add('bg-transparent', 'py-6');
             navbar.classList.remove('py-2');
         }
+
+        // Mobile only: hide during hero, reveal after
+        if (window.innerWidth < 768) {
+            const heroHeight = window.innerHeight * 0.75;
+            if (window.scrollY > heroHeight) {
+                navbar.classList.add('mobile-nav-visible');
+            } else {
+                navbar.classList.remove('mobile-nav-visible');
+            }
+        }
     });
 
-    // Contact form submission
+    // On resize: if switching to desktop, make sure navbar is always visible
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+            navbar.classList.remove('mobile-nav-visible');
+        }
+    });
+
+    // Contact form submission (guarded — form may not be present)
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
     const btnText = document.getElementById('btn-text');
 
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-        submitBtn.disabled = true;
-        btnText.textContent = 'Processando...';
+            submitBtn.disabled = true;
+            btnText.textContent = 'Processando...';
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const company = document.getElementById('company').value;
-        const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const message = document.getElementById('message').value;
 
-        const subject = encodeURIComponent('Contato KBM Security - ' + (company || name));
-        const body = encodeURIComponent(
-            'Nome: ' + name + '\n' +
-            'Email: ' + email + '\n' +
-            'Empresa: ' + company + '\n\n' +
-            'Mensagem:\n' + message
-        );
+            const subject = encodeURIComponent('Contato KBM Security - ' + (company || name));
+            const body = encodeURIComponent(
+                'Nome: ' + name + '\n' +
+                'Email: ' + email + '\n' +
+                'Empresa: ' + company + '\n\n' +
+                'Mensagem:\n' + message
+            );
 
-        window.location.href = 'mailto:kbmsecurity@gmail.com?subject=' + subject + '&body=' + body;
+            window.location.href = 'mailto:kbmsecurity@gmail.com?subject=' + subject + '&body=' + body;
 
-        setTimeout(function () {
-            submitBtn.disabled = false;
-            btnText.textContent = 'Iniciar Protocolo de Contato';
-            contactForm.reset();
-        }, 1000);
-    });
+            setTimeout(function () {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Iniciar Protocolo de Contato';
+                contactForm.reset();
+            }, 1000);
+        });
+    }
 });
