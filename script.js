@@ -86,6 +86,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // ── Interactive blink on hover / tap ──
+    const catEyes = document.getElementById('cat-eyes-logo');
+    if (catEyes) {
+        const eyelidL = catEyes.querySelector('.eyelid-left');
+        const eyelidR = catEyes.querySelector('.eyelid-right');
+        let blinking = false;
+
+        function triggerBlink() {
+            if (blinking) return;
+            blinking = true;
+            eyelidL.classList.add('blink-now');
+            eyelidR.classList.add('blink-now');
+
+            function onEnd() {
+                eyelidL.classList.remove('blink-now');
+                eyelidR.classList.remove('blink-now');
+                blinking = false;
+                eyelidL.removeEventListener('animationend', onEnd);
+            }
+            eyelidL.addEventListener('animationend', onEnd);
+        }
+
+        // Desktop hover
+        catEyes.addEventListener('mouseenter', triggerBlink);
+        // Mobile tap
+        catEyes.addEventListener('touchstart', triggerBlink, { passive: true });
+    }
+
     // Contact form submission (guarded — form may not be present)
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
