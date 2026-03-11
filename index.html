@@ -1,37 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="KBM Security - Especialistas em Red Team, Pentest e Análise de Vulnerabilidades. Testamos, Analisamos e Protegemos sua infraestrutura.">
+        content="KBM Security - Especialistas em Red Team, Pentest e Análise de Vulnerabilidades. Testamos, Analisamos e Protegemos sua infraestrutura." />
     <meta name="keywords"
-        content="segurança cibernética, red team, pentest, análise de vulnerabilidades, segurança de rede, segurança cloud">
-    <meta name="author" content="KBM Security">
+        content="segurança cibernética, red team, pentest, análise de vulnerabilidades, segurança de rede, segurança cloud" />
+    <meta name="author" content="KBM Security" />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="KBM Security - Red Team & Pentest Services">
-    <meta property="og:description" content="Segurança Inabalável: Testamos, Analisamos, Protegemos.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kbmsecurity.com">
+    <meta property="og:title" content="KBM Security - Red Team & Pentest Services" />
+    <meta property="og:description" content="Segurança Inabalável: Testamos, Analisamos, Protegemos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kbmsecurity.com" />
 
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KBM Security - Red Team & Pentest Services">
-    <meta name="twitter:description" content="Segurança Inabalável: Testamos, Analisamos, Protegemos.">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KBM Security - Red Team & Pentest Services" />
+    <meta name="twitter:description" content="Segurança Inabalável: Testamos, Analisamos, Protegemos." />
 
     <title>KBM Security - Red Team & Pentest Services</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -40,42 +40,54 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Space Grotesk', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ["Space Grotesk", "sans-serif"],
+                        mono: ["JetBrains Mono", "monospace"],
                     },
                     colors: {
-                        'kbm-red': '#ef4444',
-                        'kbm-dark': '#050505',
+                        "kbm-red": "#ef4444",
+                        "kbm-dark": "#050505",
                     },
                     animation: {
-                        'spin-slow': 'spin 3s linear infinite',
-                    }
+                        "spin-slow": "spin 3s linear infinite",
+                    },
                 },
             },
-        }
+        };
     </script>
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Analytics -->
     <script defer src="https://cloud.umami.is/script.js"
         data-website-id="287396b6-9fa7-44fd-a13d-d4545ee0fc52"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y1W1XVPMS"></script>
-    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-8Y1W1XVPMS'); </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-8Y1W1XVPMS");
+    </script>
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "vq5yxc6soy");</script>
-
-
+            c[a] =
+                c[a] ||
+                function () {
+                    (c[a].q = c[a].q || []).push(arguments);
+                };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "vq5yxc6soy");
+    </script>
 </head>
 
 <body
     class="min-h-screen bg-kbm-dark text-gray-100 font-sans overflow-x-hidden selection:bg-red-500 selection:text-white">
-
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6" role="navigation"
         aria-label="Main navigation">
@@ -84,7 +96,8 @@
                 <!-- Logo -->
                 <a href="#home" class="flex-shrink-0 flex items-center gap-2 group cursor-pointer"
                     aria-label="KBM Security Home">
-                    <img src="logo.png" alt="KBM Security" class="w-10 h-10 group-hover:scale-110 transition-transform">
+                    <img src="assets/logo.png" alt="KBM Security"
+                        class="w-10 h-10 group-hover:scale-110 transition-transform" />
                     <span class="font-mono font-bold text-xl tracking-tighter text-white">
                         KBM<span class="text-red-500"> SECURITY</span>
                     </span>
@@ -166,8 +179,8 @@
             </h1>
 
             <p class="text-xl md:text-2xl text-gray-400 mb-8 font-mono max-w-3xl mx-auto leading-relaxed">
-                Segurança Inabalável: <span class="text-red-500 font-mono font-semibold">Testamos, Analisamos,
-                    Protegemos.</span>
+                Segurança Inabalável:
+                <span class="text-red-500 font-mono font-semibold">Testamos, Analisamos, Protegemos.</span>
             </p>
 
             <div class="h-8 mb-12 font-mono text-sm md:text-base text-red-200" aria-live="polite">
@@ -175,12 +188,10 @@
             </div>
 
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="#contact"
-                    class="group relative rounded-lg px-8 py-4 bg-red-600 text-black font-bold font-mono overflow-hidden transition-transform hover:scale-105">
-                    <div
-                        class="absolute inset-0 w-full h-full bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-[-15deg]">
-                    </div>
-                    <span class="relative">INICIAR ANÁLISE</span>
+                <a href="https://www.kbmsecurity.com.br/blog" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 rounded-lg px-8 py-4 border border-white text-white font-mono hover:bg-transparent hover:border-red-500 hover:bg-red-500 hover:text-red-500 transition-colors">
+                    <img src="assets/favicon.svg" alt="" class="w-6" aria-hidden="true" />
+                    BLOG
                 </a>
                 <a href="#services"
                     class="rounded-lg px-8 py-4 border border-gray-700 text-gray-300 font-mono hover:border-red-500 hover:text-red-500 transition-colors">
@@ -261,39 +272,61 @@
                         <span class="text-red-600">/</span> QUEM SOMOS
                     </h2>
                     <p class="text-gray-400 mb-6 leading-relaxed">
-                        Fundada em 2022, a <strong class="text-white">KBM Security</strong> é especializada em operações
-                        de <span class="text-red-500">Red Team</span>. Não apenas encontramos falhas; nós simulamos
-                        adversários reais para testar os limites da sua infraestrutura.
+                        Fundada em 2022, a
+                        <strong class="text-white">KBM Security</strong> é
+                        especializada em operações de
+                        <span class="text-red-500">Red Team</span>. Não
+                        apenas encontramos falhas; nós simulamos adversários
+                        reais para testar os limites da sua infraestrutura.
                     </p>
                     <p class="text-gray-400 mb-8 leading-relaxed">
-                        Essa <strong class="text-white">precisão e prontidão para a ação</strong> estão refletidas na
-                        nossa
-                        identidade: nossa metodologia espelha o <span class="text-red-500">olhar de um gato</span> —
-                        preciso, ágil e sempre focado, pronto
-                        para a intervenção no momento exato.
+                        Essa
+                        <strong class="text-white">precisão e prontidão para a ação</strong>
+                        estão refletidas na nossa identidade: nossa
+                        metodologia espelha o
+                        <span class="text-red-500">olhar de um gato</span> —
+                        preciso, ágil e sempre focado, pronto para a
+                        intervenção no momento exato.
                     </p>
                     <p class="text-gray-400 mb-8 leading-relaxed">
-                        Estamos constantemente vigilantes
-                        para identificar vulnerabilidades e resolver problemas antes que eles causem impactos,
-                        transformando a detecção em ação imediata.
+                        Estamos constantemente vigilantes para identificar
+                        vulnerabilidades e resolver problemas antes que eles
+                        causem impactos, transformando a detecção em ação
+                        imediata.
                     </p>
 
                     <div class="grid grid-cols-2 gap-4">
                         <div class="rounded-lg border border-neutral-800 p-4 hover:border-red-900 transition-colors">
-                            <div class="text-xs font-mono text-gray-500 mb-1">Pentest</div>
-                            <div class="text-xl font-bold text-white">EXPERT</div>
+                            <div class="text-xs font-mono text-gray-500 mb-1">
+                                Pentest
+                            </div>
+                            <div class="text-xl font-bold text-white">
+                                EXPERT
+                            </div>
                         </div>
                         <div class="rounded-lg border border-neutral-800 p-4 hover:border-red-900 transition-colors">
-                            <div class="text-xs font-mono text-gray-500 mb-1">Operações</div>
-                            <div class="text-xl font-bold text-white">24/7</div>
+                            <div class="text-xs font-mono text-gray-500 mb-1">
+                                Operações
+                            </div>
+                            <div class="text-xl font-bold text-white">
+                                24/7
+                            </div>
                         </div>
                         <div class="rounded-lg border border-neutral-800 p-4 hover:border-red-900 transition-colors">
-                            <div class="text-xs font-mono text-gray-500 mb-1">Risco</div>
-                            <div class="text-xl font-bold text-white">MITIGADO</div>
+                            <div class="text-xs font-mono text-gray-500 mb-1">
+                                Risco
+                            </div>
+                            <div class="text-xl font-bold text-white">
+                                MITIGADO
+                            </div>
                         </div>
                         <div class="rounded-lg border border-neutral-800 p-4 hover:border-red-900 transition-colors">
-                            <div class="text-xs font-mono text-gray-500 mb-1">Compliance</div>
-                            <div class="text-xl font-bold text-white">TOTAL</div>
+                            <div class="text-xs font-mono text-gray-500 mb-1">
+                                Compliance
+                            </div>
+                            <div class="text-xl font-bold text-white">
+                                TOTAL
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -308,7 +341,9 @@
                             <div class="w-3 h-3 rounded-full bg-red-500" aria-hidden="true"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500" aria-hidden="true"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500" aria-hidden="true"></div>
-                            <div class="ml-2 text-xs text-gray-500">root@kbm-security:~</div>
+                            <div class="ml-2 text-xs text-gray-500">
+                                root@kbm-security:~
+                            </div>
                         </div>
                         <div class="p-6 text-gray-300 space-y-2">
                             <div class="flex gap-2">
@@ -317,11 +352,12 @@
                                 <span>kbm --info</span>
                             </div>
                             <div class="pl-4 text-gray-500 opacity-80">
-                                Loading modules...<br>
-                                [OK] Pentest Web/API<br>
-                                [OK] Network Analysis<br>
-                                [OK] Cloud Security<br>
-                                <span class="text-green-500">Target Acquired: Vulnerabilities identified.</span>
+                                Loading modules...<br />
+                                [OK] Pentest Web/API<br />
+                                [OK] Network Analysis<br />
+                                [OK] Cloud Security<br />
+                                <span class="text-green-500">Target Acquired: Vulnerabilities
+                                    identified.</span>
                             </div>
                             <div class="flex gap-2 pt-4">
                                 <span class="text-red-500" aria-hidden="true">➜</span>
@@ -337,9 +373,13 @@
 
     <!-- Problem Section -->
     <section class="py-20 bg-neutral-900 relative overflow-hidden" aria-labelledby="problem-heading">
-        <div class="absolute inset-0 opacity-10"
-            style="background-image: radial-gradient(#ef4444 1px, transparent 1px); background-size: 30px 30px;"
-            aria-hidden="true"></div>
+        <div class="absolute inset-0 opacity-10" style="
+                    background-image: radial-gradient(
+                        #ef4444 1px,
+                        transparent 1px
+                    );
+                    background-size: 30px 30px;
+                " aria-hidden="true"></div>
 
         <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
             <div class="inline-block p-4 rounded-full bg-red-500/10 mb-6 animate-pulse">
@@ -351,12 +391,14 @@
                 </svg>
             </div>
             <h2 id="problem-heading" class="text-3xl md:text-5xl font-bold text-white mb-6">
-                Sua empresa está <span
-                    class="text-red-500 underline decoration-dashed underline-offset-8">realmente</span> segura?
+                Sua empresa está
+                <span class="text-red-500 underline decoration-dashed underline-offset-8">realmente</span>
+                segura?
             </h2>
             <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Muitas empresas acreditam que estão protegidas até sofrerem o primeiro ataque. Vulnerabilidades não
-                identificadas são portas abertas para o comprometimento de dados.
+                Muitas empresas acreditam que estão protegidas até sofrerem
+                o primeiro ataque. Vulnerabilidades não identificadas são
+                portas abertas para o comprometimento de dados.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-12">
@@ -369,10 +411,14 @@
                     <div class="relative">
                         <span
                             class="inline-block text-4xl font-black text-red-500/20 group-hover:text-red-500/40 transition-colors font-mono mb-2">01</span>
-                        <h3 class="text-xl font-bold text-white mb-4">Auditoria e Escopo</h3>
+                        <h3 class="text-xl font-bold text-white mb-4">
+                            Auditoria e Escopo
+                        </h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
-                            Definição da área de análise. Auditoria detalhada de ativos, arquitetura de rede e sistemas
-                            para estabelecer a fundação da avaliação de segurança.
+                            Definição da área de análise. Auditoria
+                            detalhada de ativos, arquitetura de rede e
+                            sistemas para estabelecer a fundação da
+                            avaliação de segurança.
                         </p>
                     </div>
                 </div>
@@ -386,10 +432,15 @@
                     <div class="relative">
                         <span
                             class="inline-block text-4xl font-black text-red-500/20 group-hover:text-red-500/40 transition-colors font-mono mb-2">02</span>
-                        <h3 class="text-xl font-bold text-white mb-4">Diagnóstico de Vulnerabilidade</h3>
+                        <h3 class="text-xl font-bold text-white mb-4">
+                            Diagnóstico de Vulnerabilidade
+                        </h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
-                            Execução de <em class="text-red-400 not-italic">Pen Test</em> (Testes de Penetração) para
-                            encontrar e classificar vulnerabilidades e <em class="text-red-400 not-italic">gaps</em> de
+                            Execução de
+                            <em class="text-red-400 not-italic">Pen Test</em>
+                            (Testes de Penetração) para encontrar e
+                            classificar vulnerabilidades e
+                            <em class="text-red-400 not-italic">gaps</em> de
                             segurança em redes, aplicações e configurações.
                         </p>
                     </div>
@@ -404,10 +455,14 @@
                     <div class="relative">
                         <span
                             class="inline-block text-4xl font-black text-red-500/20 group-hover:text-red-500/40 transition-colors font-mono mb-2">03</span>
-                        <h3 class="text-xl font-bold text-white mb-4">Implementação e Validação</h3>
+                        <h3 class="text-xl font-bold text-white mb-4">
+                            Implementação e Validação
+                        </h3>
                         <p class="text-gray-400 text-sm leading-relaxed">
-                            Entrega de um plano de remediação detalhado. Aconselhamento na implementação e re-testes
-                            para validar o fechamento de todas as brechas identificadas.
+                            Entrega de um plano de remediação detalhado.
+                            Aconselhamento na implementação e re-testes para
+                            validar o fechamento de todas as brechas
+                            identificadas.
                         </p>
                     </div>
                 </div>
@@ -422,13 +477,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="font-mono text-red-500 text-sm tracking-widest uppercase">Entregas</span>
-                <h2 id="services-heading" class="text-4xl font-bold mt-2 text-white"><span class="text-red-600">/</span>
-                    O QUE FAZEMOS</h2>
+                <h2 id="services-heading" class="text-4xl font-bold mt-2 text-white">
+                    <span class="text-red-600">/</span> O QUE FAZEMOS
+                </h2>
             </div>
 
             <!-- Horizontal Scroll Container -->
             <div id="services-scroll-container" class="relative w-full overflow-hidden no-scrollbar py-10"
-                style="overflow-x: scroll;">
+                style="overflow-x: scroll">
                 <div id="services-track" class="flex gap-6">
                     <!-- Original Cards -->
                     <!-- Service Card 1 -->
@@ -455,13 +511,14 @@
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
-                            Web/API</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Pentest Web/API
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Simulação de ataques em aplicações web e APIs para identificar falhas como SQL Injection,
-                            XSS e
-                            quebra de autenticação.
+                            Simulação de ataques em aplicações web e APIs
+                            para identificar falhas como SQL Injection, XSS
+                            e quebra de autenticação.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
                             <span
@@ -497,11 +554,13 @@
                                 <line x1="6" y1="18" x2="6.01" y2="18"></line>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
-                            Network</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Pentest Network
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Análise profunda da infraestrutura de rede interna e externa, explorando configurações
+                            Análise profunda da infraestrutura de rede
+                            interna e externa, explorando configurações
                             incorretas e serviços vulneráveis.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
@@ -534,11 +593,13 @@
                                 <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
-                            Cloud</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Pentest Cloud
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Avaliação de segurança em ambientes AWS, Azure e GCP, focando em permissões excessivas e
+                            Avaliação de segurança em ambientes AWS, Azure e
+                            GCP, focando em permissões excessivas e
                             configurações inseguras.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
@@ -573,12 +634,13 @@
                                 <path d="M12 16h.01"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Análise
-                            de
-                            Vulnerabilidades</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Análise de Vulnerabilidades
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Mapeamento contínuo de ativos e classificação de riscos para correção proativa antes da
+                            Mapeamento contínuo de ativos e classificação de
+                            riscos para correção proativa antes da
                             exploração real.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
@@ -610,12 +672,14 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
-                            Simulação de Phishing</h3>
+                            Simulação de Phishing
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Testes controlados (inofensivos) para medir quantos funcionários clicam ou fornecem dados em
-                            e-mails fraudulentos. É o principal serviço que usa a técnica de Red Team para
-                            conscientização.
+                            Testes controlados (inofensivos) para medir
+                            quantos funcionários clicam ou fornecem dados em
+                            e-mails fraudulentos. É o principal serviço que
+                            usa a técnica de Red Team para conscientização.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
                             <span
@@ -653,13 +717,14 @@
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
-                            Web/API</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Pentest Web/API
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Simulação de ataques em aplicações web e APIs para identificar falhas como SQL Injection,
-                            XSS e
-                            quebra de autenticação.
+                            Simulação de ataques em aplicações web e APIs
+                            para identificar falhas como SQL Injection, XSS
+                            e quebra de autenticação.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
                             <span
@@ -695,11 +760,13 @@
                                 <line x1="6" y1="18" x2="6.01" y2="18"></line>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
-                            Network</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Pentest Network
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Análise profunda da infraestrutura de rede interna e externa, explorando configurações
+                            Análise profunda da infraestrutura de rede
+                            interna e externa, explorando configurações
                             incorretas e serviços vulneráveis.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
@@ -732,11 +799,13 @@
                                 <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Pentest
-                            Cloud</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Pentest Cloud
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Avaliação de segurança em ambientes AWS, Azure e GCP, focando em permissões excessivas e
+                            Avaliação de segurança em ambientes AWS, Azure e
+                            GCP, focando em permissões excessivas e
                             configurações inseguras.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
@@ -771,12 +840,13 @@
                                 <path d="M12 16h.01"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">Análise
-                            de
-                            Vulnerabilidades</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
+                            Análise de Vulnerabilidades
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Mapeamento contínuo de ativos e classificação de riscos para correção proativa antes da
+                            Mapeamento contínuo de ativos e classificação de
+                            riscos para correção proativa antes da
                             exploração real.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
@@ -808,10 +878,12 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">
-                            Simulação de Phishing</h3>
+                            Simulação de Phishing
+                        </h3>
                         <p
                             class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-neutral-800 pl-3 group-hover:border-red-900 transition-colors">
-                            Orquestração de ameaças com priorização por risco de negócio e redução contínua da
+                            Orquestração de ameaças com priorização por
+                            risco de negócio e redução contínua da
                             superfície de ataque.
                         </p>
                         <div class="flex flex-wrap gap-2 mt-auto">
@@ -823,7 +895,6 @@
                                 class="text-[10px] uppercase tracking-wider px-2 py-1 bg-neutral-950 border border-neutral-800 text-gray-500 group-hover:border-red-900 group-hover:text-red-400 transition-colors">OPENVAS</span>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -845,162 +916,110 @@
             <div class="relative w-full overflow-hidden no-scrollbar py-4">
                 <div id="clients-track" class="flex items-center justify-center gap-16 animate-scroll-clients">
                     <!-- Original logos -->
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
                     <!-- Duplicated for seamless scroll -->
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="limitis logo.png" alt="Limitis"
-                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
+                    <img src="assets/limitis logo.png" alt="Limitis"
+                        class="h-12 md:h-16 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300" />
                 </div>
             </div>
         </div>
     </section>
     <!-- Contact Section -->
     <section id="contact" class="py-8 bg-black relative" aria-labelledby="contact-heading">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-neutral-950 rounded-2xl border border-neutral-800 p-8 md:p-12 relative overflow-hidden">
-
-                <div class="text-center mb-8">
-                    <div class="inline-block p-3 rounded-full bg-red-500/5 border border-red-500/20 mb-6">
-                        <svg class="w-8 h-8 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+        <div class="max-w-xl mx-auto px-4">
+            <div class="bg-neutral-950 rounded-2xl border border-neutral-800 p-6 md:p-8 relative overflow-hidden">
+                <div class="text-center mb-5">
+                    <div class="inline-block p-2.5 rounded-full bg-red-500/5 border border-red-500/20 mb-4">
+                        <svg class="w-6 h-6 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="4 17 10 11 4 5"></polyline>
                             <line x1="12" y1="19" x2="20" y2="19"></line>
                         </svg>
                     </div>
-                    <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold text-red mb-6 tracking-tight">
+                    <h2 id="contact-heading" class="text-2xl md:text-3xl font-bold text-red mb-3 tracking-tight">
                         Contate a KBM
                     </h2>
-                    <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-2">
-                        Vulnerabilidades não emitem avisos prévios. Enquanto sua infraestrutura espera, ameaças evoluem.
-                    </p>
-                    <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
-                        Não aguarde o incidente para validar sua defesa.
+                    <p class="text-gray-400 text-thin md:text-base max-w-sm mx-20 leading-relaxed mb-1 my-4">
+                        Vulnerabilidades não emitem avisos prévios. Enquanto
+                        sua infraestrutura espera, as ameaças evoluem. Não
+                        aguarde o incidente para validar sua defesa.
                     </p>
                 </div>
-
-                <!-- Contact Cards Grid -->
-                <div class="max-w-4xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                        <!-- Email Card -->
-                        <a href="mailto:redteam@kbmsecurity.com.br"
-                            class="group relative bg-gradient-to-br from-neutral-900/80 to-neutral-950 rounded-xl border border-neutral-800 p-5 hover:border-red-500/50 transition-all duration-300 overflow-hidden text-center">
-                            <!-- Subtle glow on hover -->
-                            <div
-                                class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
-                            </div>
-
-                            <!-- Icon -->
-                            <div
-                                class="relative mx-auto mb-3 w-11 h-11 bg-neutral-900 rounded-lg flex items-center justify-center border border-neutral-700 group-hover:border-red-500/50 group-hover:shadow-[0_0_20px_rgba(239,68,68,0.2)] transition-all duration-300">
-                                <svg class="w-5 h-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                                </svg>
-                            </div>
-
-                            <!-- Content -->
-                            <div class="relative">
-                                <h3
-                                    class="text-base font-bold text-white mb-1 group-hover:text-red-400 transition-colors">
-                                    Email</h3>
-                                <p class="text-gray-500 font-mono text-xs group-hover:text-gray-400 transition-colors">
-                                    redteam@kbmsecurity.com.br</p>
-                            </div>
-                        </a>
-
-                        <!-- LinkedIn Card -->
-                        <a href="https://www.linkedin.com/company/kbmsecurity/" target="_blank"
-                            rel="noopener noreferrer"
-                            class="group relative bg-gradient-to-br from-neutral-900/80 to-neutral-950 rounded-xl border border-neutral-800 p-5 hover:border-blue-500/50 transition-all duration-300 overflow-hidden text-center">
-                            <!-- Subtle glow on hover -->
-                            <div
-                                class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
-                            </div>
-
-                            <!-- Icon -->
-                            <div
-                                class="relative mx-auto mb-3 w-11 h-11 bg-neutral-900 rounded-lg flex items-center justify-center border border-neutral-700 group-hover:border-blue-500/50 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] transition-all duration-300">
-                                <svg class="w-5 h-5 text-blue-500" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                                </svg>
-                            </div>
-
-                            <!-- Content -->
-                            <div class="relative">
-                                <h3
-                                    class="text-base font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">
-                                    LinkedIn</h3>
-                                <p class="text-gray-500 font-mono text-xs group-hover:text-gray-400 transition-colors">
-                                    @kbmsecurity</p>
-                            </div>
-                        </a>
-
-                        <!-- Instagram Card -->
-                        <a href="https://www.instagram.com/kbmsecurity" target="_blank" rel="noopener noreferrer"
-                            class="group relative bg-gradient-to-br from-neutral-900/80 to-neutral-950 rounded-xl border border-neutral-800 p-5 hover:border-pink-500/50 transition-all duration-300 overflow-hidden text-center">
-                            <!-- Subtle glow on hover -->
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
-                            </div>
-
-                            <!-- Icon -->
-                            <div
-                                class="relative mx-auto mb-3 w-11 h-11 bg-neutral-900 rounded-lg flex items-center justify-center border border-neutral-700 group-hover:border-pink-500/50 group-hover:shadow-[0_0_20px_rgba(236,72,153,0.2)] transition-all duration-300">
-                                <svg class="w-5 h-5 text-pink-500" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                </svg>
-                            </div>
-
-                            <!-- Content -->
-                            <div class="relative">
-                                <h3
-                                    class="text-base font-bold text-white mb-1 group-hover:text-pink-400 transition-colors">
-                                    Instagram</h3>
-                                <p class="text-gray-500 font-mono text-xs group-hover:text-gray-400 transition-colors">
-                                    @kbmsecurity</p>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <!-- CTA Button -->
-                    <div class="text-center">
-                        <a href="mailto:redteam@kbmsecurity.com.br?subject=Solicitação de Análise de Segurança"
-                            class="group inline-flex items-center gap-4 rounded-lg bg-white text-black font-bold py-5 px-10 hover:bg-red-600 hover:text-white transition-all duration-300 uppercase tracking-widest font-mono text-sm">
-                            <span
-                                class="w-3 h-3 bg-red-600 rounded-full group-hover:bg-white group-hover:animate-pulse transition-colors"></span>
-                            <span>Solicitar Análise de Segurança</span>
-                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                <!-- CTA Button -->
+                <div class="text-center my-8">
+                    <a href="mailto:redteam@kbmsecurity.com.br?subject=Solicitação de Análise de Segurança"
+                        class="group inline-flex items-center gap-3 rounded-lg bg-white text-black font-bold py-3 px-7 hover:bg-red-600 hover:text-white transition-all duration-300 uppercase tracking-widest font-mono text-xs">
+                        <span
+                            class="w-2.5 h-2.5 bg-red-600 rounded-full group-hover:bg-white group-hover:animate-pulse transition-colors"></span>
+                        <span>Solicitar Análise</span>
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- Contact Icons Row -->
+                <div class="max-w-xl mx-auto mt-6">
+                    <div class="flex flex-wrap justify-center gap-3 mb-6">
+                        <!-- Email -->
+                        <a href="mailto:redteam@kbmsecurity.com.br" aria-label="Email"
+                            class="group w-12 h-12 bg-neutral-900 rounded-xl border border-neutral-800 flex items-center justify-center hover:border-red-500/60 hover:shadow-[0_0_18px_rgba(239,68,68,0.25)] hover:bg-neutral-800 transition-all duration-300">
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-red-400 transition-colors"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                             </svg>
                         </a>
-                        <p class="text-gray-600 text-sm font-mono mt-6">
-                            Resposta em até <span class="text-red-500">24 horas</span>
-                        </p>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/company/kbmsecurity/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"
+                            class="group w-12 h-12 bg-neutral-900 rounded-xl border border-neutral-800 flex items-center justify-center hover:border-blue-500/60 hover:shadow-[0_0_18px_rgba(59,130,246,0.25)] hover:bg-neutral-800 transition-all duration-300">
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/kbmsecurity" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"
+                            class="group w-12 h-12 bg-neutral-900 rounded-xl border border-neutral-800 flex items-center justify-center hover:border-pink-500/60 hover:shadow-[0_0_18px_rgba(236,72,153,0.25)] hover:bg-neutral-800 transition-all duration-300">
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-pink-400 transition-colors"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+
+                        <!-- Blog -->
+                        <a href="https://www.kbmsecurity.com.br/blog" target="_blank" rel="noopener noreferrer"
+                            aria-label="Blog"
+                            class="group w-12 h-12 bg-neutral-900 rounded-xl border border-neutral-800 flex items-center justify-center hover:border-red-500/60 hover:shadow-[0_0_18px_rgba(239,68,68,0.25)] hover:bg-red-500 transition-all duration-300">
+                            <img src="assets/favicon.svg" alt=""
+                                class="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"
+                                aria-hidden="true" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1012,11 +1031,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-2">
-                    <img src="logo.png" alt="KBM Security" class="w-8 h-8">
+                    <img src="assets/logo.png" alt="KBM Security" class="w-8 h-8" />
                     <span class="font-mono font-bold text-xl text-white">KBM SECURITY</span>
                 </div>
                 <div class="text-gray-500 text-sm">
-                    &copy; <span id="year"></span> KBM Security. Todos os direitos reservados.
+                    &copy; <span id="year"></span> KBM Security. Todos os
+                    direitos reservados.
                 </div>
                 <div class="flex gap-4">
                     <a href="mailto:redteam@kbmsecurity.com.br"
@@ -1045,10 +1065,13 @@
     <script src="script.js"></script>
     <!-- Scroller Logic -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('services-scroll-container');
-            const track = document.getElementById('services-track');
-            const dotsContainer = document.getElementById('pagination-dots');
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById(
+                "services-scroll-container",
+            );
+            const track = document.getElementById("services-track");
+            const dotsContainer =
+                document.getElementById("pagination-dots");
 
             // Configuration
             const originalCardCount = 5;
@@ -1058,20 +1081,20 @@
 
             // Generate Dots
             for (let i = 0; i < originalCardCount; i++) {
-                const dot = document.createElement('button');
+                const dot = document.createElement("button");
                 dot.className = `w-2 h-2 rounded-full transition-all duration-300 bg-neutral-800 hover:bg-red-500`;
                 dot.ariaLabel = `Go to slide ${i + 1}`;
 
-                dot.addEventListener('click', () => {
+                dot.addEventListener("click", () => {
                     // Calculate position: Card Width (including gap) * index
-                    // We assume first card width + gap. 
+                    // We assume first card width + gap.
                     const card = track.children[0];
                     const gap = 24; // tailwind gap-6 is 1.5rem = 24px
                     const cardWidth = card.offsetWidth + gap;
 
                     container.scrollTo({
                         left: i * cardWidth,
-                        behavior: 'smooth'
+                        behavior: "smooth",
                     });
 
                     updateActiveDot(i);
@@ -1089,16 +1112,18 @@
                     const card = track.children[0];
                     const gap = 24;
                     const cardWidth = card.offsetWidth + gap;
-                    activeIndex = Math.round(container.scrollLeft / cardWidth) % originalCardCount;
+                    activeIndex =
+                        Math.round(container.scrollLeft / cardWidth) %
+                        originalCardCount;
                 }
 
                 for (let i = 0; i < dots.length; i++) {
                     if (i === activeIndex) {
-                        dots[i].classList.remove('bg-neutral-800');
-                        dots[i].classList.add('bg-red-500', 'scale-125');
+                        dots[i].classList.remove("bg-neutral-800");
+                        dots[i].classList.add("bg-red-500", "scale-125");
                     } else {
-                        dots[i].classList.add('bg-neutral-800');
-                        dots[i].classList.remove('bg-red-500', 'scale-125');
+                        dots[i].classList.add("bg-neutral-800");
+                        dots[i].classList.remove("bg-red-500", "scale-125");
                     }
                 }
             }
@@ -1119,21 +1144,36 @@
                         }
 
                         // Optional: Update dots while scrolling (might be distinct visual noise, but keeps sync)
-                        // updateActiveDot(); 
+                        // updateActiveDot();
                     }
                 }, 20); // 50fps
             }
 
             // Interaction Handlers
-            container.addEventListener('mouseenter', () => isPaused = true);
-            container.addEventListener('mouseleave', () => isPaused = false);
-            dotsContainer.addEventListener('mouseenter', () => isPaused = true);
-            dotsContainer.addEventListener('mouseleave', () => isPaused = false);
+            container.addEventListener(
+                "mouseenter",
+                () => (isPaused = true),
+            );
+            container.addEventListener(
+                "mouseleave",
+                () => (isPaused = false),
+            );
+            dotsContainer.addEventListener(
+                "mouseenter",
+                () => (isPaused = true),
+            );
+            dotsContainer.addEventListener(
+                "mouseleave",
+                () => (isPaused = false),
+            );
 
             // Handle manual scroll (touch/wheel) to pause temporarily
-            container.addEventListener('touchstart', () => isPaused = true);
-            container.addEventListener('touchend', () => {
-                setTimeout(() => isPaused = false, 2000); // Resume after 2s
+            container.addEventListener(
+                "touchstart",
+                () => (isPaused = true),
+            );
+            container.addEventListener("touchend", () => {
+                setTimeout(() => (isPaused = false), 2000); // Resume after 2s
             });
 
             // Initialize
@@ -1141,8 +1181,8 @@
             updateActiveDot(0);
 
             // Update dots on scroll event (throttled/debounced ideally, but direct for responsiveness)
-            container.addEventListener('scroll', () => {
-                // Determine functionality - if auto scrolling, maybe don't update constantly? 
+            container.addEventListener("scroll", () => {
+                // Determine functionality - if auto scrolling, maybe don't update constantly?
                 // Let's update constantly for "intuitiveness"
                 updateActiveDot();
             });
